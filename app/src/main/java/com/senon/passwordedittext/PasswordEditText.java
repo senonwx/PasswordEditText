@@ -72,6 +72,7 @@ public class PasswordEditText extends RelativeLayout {
 
     /**
      * 初始化编辑框
+     *
      * @param bgcolor 输入框背景色
      */
     private void initEdit(int bgcolor) {
@@ -154,6 +155,7 @@ public class PasswordEditText extends RelativeLayout {
 
     /**
      * 是否显示明文
+     *
      * @param showPwd
      */
     public void setShowPwd(boolean showPwd) {
@@ -167,12 +169,13 @@ public class PasswordEditText extends RelativeLayout {
         }
     }
 
-    public boolean getShowPwd(){
+    public boolean getShowPwd() {
         return textViews[0].getTransformationMethod() == HideReturnsTransformationMethod.getInstance();
     }
 
     /**
      * 设置显示类型
+     *
      * @param type
      */
     public void setInputType(int type) {
@@ -198,6 +201,7 @@ public class PasswordEditText extends RelativeLayout {
 
     /**
      * 根据输入字符，显示密码个数
+     *
      * @param s
      */
     public void initDatas(Editable s) {
@@ -248,6 +252,7 @@ public class PasswordEditText extends RelativeLayout {
 
     /**
      * 显示键盘
+     *
      * @param view
      */
     public void showKeyBord(View view) {

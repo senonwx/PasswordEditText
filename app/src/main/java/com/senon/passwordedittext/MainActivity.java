@@ -13,8 +13,8 @@ public class MainActivity extends AppCompatActivity {
 
     private static final String TAG = MainActivity.class.getName();
 
-    private PasswordEditText editText,editText2,editText3;
-    private Button clear_text,clear,set,get_password;
+    private PasswordEditText editText, editText2, editText3;
+    private Button clear_text, clear, set, get_password;
     private TextView tv;
 
     @Override
@@ -54,7 +54,7 @@ public class MainActivity extends AppCompatActivity {
                 editText.setShowPwd(!editText.getShowPwd());
                 editText2.setShowPwd(!editText2.getShowPwd());
                 editText3.setShowPwd(!editText3.getShowPwd());
-        }
+            }
         });
 
         //设置数字
@@ -71,22 +71,28 @@ public class MainActivity extends AppCompatActivity {
         get_password.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                tv.setText("editText:"+editText.getPwdText()+
-                        "\neditText2:"+editText2.getPwdText()+
-                        "\neditText3:"+editText3.getPwdText());
+                tv.setText("editText:" + editText.getPwdText() +
+                        "\neditText2:" + editText2.getPwdText() +
+                        "\neditText3:" + editText3.getPwdText());
             }
         });
     }
 
     private void initView() {
         //设置密码框style
-        editText.initStyle(R.drawable.background_box, 4, 15,
-                0x00ffffff,0xff333333, 20,
-                R.drawable.backgroud_password);
+        editText.initStyle(
+                R.drawable.background_box,//输入框背景
+                4,//密码长度
+                15,//分割宽度
+                0x00ffffff,//分割线颜色
+                0xff333333,//字体颜色
+                20,//字体大小
+                R.drawable.backgroud_password//字体背景
+        );
         editText.setOnTextFinishListener(new PasswordEditText.OnTextFinishListener() {
             @Override
             public void onFinish(String str) {
-                Log.e(TAG,"onFinish  str= " + str);
+                Log.e(TAG, "onFinish  str= " + str);
                 editText2.setFocus();
             }
         });
@@ -94,29 +100,29 @@ public class MainActivity extends AppCompatActivity {
 
         //设置密码框style
         editText2.initStyle(R.drawable.background_box, 4, 15,
-                0x00ffffff,0xff333333, 20,
+                0x00ffffff, 0xff333333, 20,
                 R.drawable.backgroud_password);
         editText2.setOnTextFinishListener(new PasswordEditText.OnTextFinishListener() {
             @Override
             public void onFinish(String str) {
-                Log.e(TAG,"onFinish  str= " + str);
-                if(str.equals(editText.getPwdText())){
-                    Toast.makeText(MainActivity.this,"输入密码相同，恭喜啊！"+str,Toast.LENGTH_SHORT).show();
-                }else{
-                    Toast.makeText(MainActivity.this,"两次密码不同，走开啊！",Toast.LENGTH_SHORT).show();
+                Log.e(TAG, "onFinish  str= " + str);
+                if (str.equals(editText.getPwdText())) {
+                    Toast.makeText(MainActivity.this, "输入密码相同，恭喜啊！" + str, Toast.LENGTH_SHORT).show();
+                } else {
+                    Toast.makeText(MainActivity.this, "两次密码不同，走开啊！", Toast.LENGTH_SHORT).show();
                 }
             }
         });
 
         //设置密码框style
         editText3.initStyle(R.drawable.background_box_stroke, 6, 1,
-                0xff999999 ,0xff333333, 20,
+                0xff999999, 0xff333333, 20,
                 R.drawable.backgroud_password_tran);
         editText3.setOnTextFinishListener(new PasswordEditText.OnTextFinishListener() {
             @Override
             public void onFinish(String str) {
-                Log.e(TAG,"onFinish  str= " + str);
-                Toast.makeText(MainActivity.this,"editText3 content= "+str,Toast.LENGTH_SHORT).show();
+                Log.e(TAG, "onFinish  str= " + str);
+                Toast.makeText(MainActivity.this, "editText3 content= " + str, Toast.LENGTH_SHORT).show();
             }
         });
     }
