@@ -23,7 +23,7 @@ editText.initStyle(
         R.drawable.backgroud_password//字体背景
 );
 ```
-1) 监听输入框输入完整监听
+(1) 监听输入框输入完整监听
 ```
 editText.setOnTextFinishListener(new PasswordEditText.OnTextFinishListener() {
     @Override
@@ -32,23 +32,23 @@ editText.setOnTextFinishListener(new PasswordEditText.OnTextFinishListener() {
     }
 });
 ```
-2) 是否文明显示 
+(2) 是否文明显示 
 ```
 editText.setShowPwd(false);//默认为false
 ```
-3) 设置文本 
+(3) 设置文本 
 ```
 editText.setPwdText("1234");
 ```
-4) 清空文本 
+(4) 清空文本 
 ```
 editText.clearText();
 ```
-5) 获取文本 
+(5) 获取文本 
 ```
 editText.getPwdText();
 ```
-6) 设置焦点并打开软键盘 
+(6) 设置焦点并打开软键盘 
 ```
 editText.setFocus();
 ```
