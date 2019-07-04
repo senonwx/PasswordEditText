@@ -50,7 +50,6 @@ public class MainActivity extends AppCompatActivity {
         clear_text.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
                 editText.setShowPwd(!editText.getShowPwd());
                 editText2.setShowPwd(!editText2.getShowPwd());
                 editText3.setShowPwd(!editText3.getShowPwd());
@@ -81,13 +80,13 @@ public class MainActivity extends AppCompatActivity {
     private void initView() {
         //设置密码框style
         editText.initStyle(
-                R.drawable.background_box,//输入框背景
+                R.drawable.background_box_one,//输入框背景
                 4,//密码长度
                 15,//分割宽度
                 0x00ffffff,//分割线颜色
                 0xff333333,//字体颜色
                 20,//字体大小
-                R.drawable.backgroud_password//字体背景
+                R.drawable.backgroud_password_one//字体背景
         );
         editText.setOnTextFinishListener(new PasswordEditText.OnTextFinishListener() {
             @Override
@@ -99,9 +98,9 @@ public class MainActivity extends AppCompatActivity {
 
 
         //设置密码框style
-        editText2.initStyle(R.drawable.background_box, 4, 15,
+        editText2.initStyle(R.drawable.background_box_two, 4, 15,
                 0x00ffffff, 0xff333333, 20,
-                R.drawable.backgroud_password);
+                R.drawable.backgroud_password_two);
         editText2.setOnTextFinishListener(new PasswordEditText.OnTextFinishListener() {
             @Override
             public void onFinish(String str) {
@@ -115,9 +114,9 @@ public class MainActivity extends AppCompatActivity {
         });
 
         //设置密码框style
-        editText3.initStyle(R.drawable.background_box_stroke, 6, 1,
-                0xff999999, 0xff333333, 20,
-                R.drawable.backgroud_password_tran);
+        editText3.initStyle(R.drawable.background_box_three, 6, 1,
+                0xff999999, 0xffDD2424, 20,
+                R.drawable.backgroud_password_three);
         editText3.setOnTextFinishListener(new PasswordEditText.OnTextFinishListener() {
             @Override
             public void onFinish(String str) {
@@ -125,6 +124,8 @@ public class MainActivity extends AppCompatActivity {
                 Toast.makeText(MainActivity.this, "editText3 content= " + str, Toast.LENGTH_SHORT).show();
             }
         });
+
+
     }
 
 
