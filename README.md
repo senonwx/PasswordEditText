@@ -23,7 +23,7 @@ editText.initStyle(
         R.drawable.backgroud_password//字体背景
 );
 ```
-(1) 监听输入框输入完整监听
+* 监听输入框输入完整监听
 ```
 editText.setOnTextFinishListener(new PasswordEditText.OnTextFinishListener() {
     @Override
@@ -32,26 +32,40 @@ editText.setOnTextFinishListener(new PasswordEditText.OnTextFinishListener() {
     }
 });
 ```
-(2) 是否文明显示 
+* 是否文明显示 
 ```
 editText.setShowPwd(false);//默认为false
 ```
-(3) 设置文本 
+* 设置文本 
 ```
 editText.setPwdText("1234");
 ```
-(4) 清空文本 
+* 清空文本 
 ```
 editText.clearText();
 ```
-(5) 获取文本 
+* 获取文本 
 ```
 editText.getPwdText();
 ```
-(6) 设置焦点并打开软键盘 
+* 设置焦点并打开软键盘 
 ```
 editText.setFocus();
 ```
+## 可配置属性
+
+#### PasswordEditText
+
+属性名 | 属性说明
+:---:|:---:
+bgColor | 输入体背景(@DrawableRes int resid)
+pwdLength | 密码长度(int length)
+slpilineWidth | 分割宽度(float dipValue)
+splilineColor | 分割线颜色(@ColorInt int color)
+pwdColor | 字体颜色(@ColorInt int color)
+pwdSize | 字体大小(float dp)
+pwdBg | 字体背景(@DrawableRes int resid)
+
 更多功能运行demo体验
 
 
