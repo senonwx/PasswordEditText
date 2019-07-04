@@ -36,13 +36,21 @@ editText.setOnTextFinishListener(new PasswordEditText.OnTextFinishListener() {
 ```
 editText.setShowPwd(false);//默认为false
 ```
-3) 清空文本 
-```
-editText3.clearText();
-```
-4) 设置文本 
+3) 设置文本 
 ```
 editText.setPwdText("1234");
+```
+4) 清空文本 
+```
+editText.clearText();
+```
+5) 获取文本 
+```
+editText.getPwdText();
+```
+6) 设置焦点并打开软键盘 
+```
+editText.setFocus();
 ```
 更多功能运行demo体验
 
